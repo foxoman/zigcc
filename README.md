@@ -35,3 +35,9 @@ build linux executables from windows:
 ```
 nim c --cc:clang --clang.exe="zigcc.cmd" --clang.linkerexe="zigcc.cmd" --passc:"-target x86_64-linux-gnu" --passl:"-target x86_64-linux-gnu" --forceBuild:on --os:linux --opt:speed  --out:hellolinux hello.nim
 ```
+
+build windows executables from linux:
+
+```
+nim c --cc:clang --clang.exe="zigcc" --clang.linkerexe="zigcc" --passc:"-target x86_64-windows" --passl:"-target x86_64-windows" --forceBuild:on --os:windows --opt:speed foo.nim
+```
